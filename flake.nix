@@ -22,6 +22,20 @@
     # Desktop environment
      hyprland.url = "github:hyprwm/Hyprland";
      hyprland.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Browser
+    zen-browser = {
+      # git+https instead of github: scheme - api.github.com is unreachable from this network
+      url = "git+https://github.com/0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # Wired using https://nixos-unified.org/autowiring.html

@@ -52,24 +52,7 @@ in
      wayland.enable=true;
 };
     services.displayManager.defaultSession = "hyprland";
-    # Essential Wayland/Hyprland packages
-    environment.systemPackages = with pkgs; [
-      waybar
-      opencode
-      wofi
-      kitty
-      dunst
-      grim
-      slurp
-      wl-clipboard
-      # Additional useful tools
-      mako
-      wlogout
-      brightnessctl
-      pamixer
-      pavucontrol
-      networkmanagerapplet
-    ];
-    # Enable pipewire for audio (if not already enabled)
+    # Desktop apps (waybar, kitty, wofi, mako, etc.) live in home-manager now:
+    # see modules/home/packages.nix
   };
 }

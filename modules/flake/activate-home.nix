@@ -7,7 +7,7 @@
         name = "activate-home";
         text = ''
           set -x
-          ${lib.getExe self'.packages.activate} "batth"@
+          ${lib.getExe self'.packages.activate} "$(id -un)"@
         '';
       };
     };

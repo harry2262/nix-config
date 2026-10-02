@@ -33,6 +33,28 @@
         "type": "github"
       }
     },
+    "firefox-addons": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "pkgs/firefox-addons",
+        "lastModified": 1790913743,
+        "narHash": "sha256-2dSW/+UbvXUSyIhsKVVNqCYu3eGKlqhPa75a8zD27bw=",
+        "owner": "rycee",
+        "repo": "nur-expressions",
+        "rev": "50e98bb0f5c5e7fddb26c26b044f0f363f53584c",
+        "type": "gitlab"
+      },
+      "original": {
+        "dir": "pkgs/firefox-addons",
+        "owner": "rycee",
+        "repo": "nur-expressions",
+        "type": "gitlab"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -614,6 +636,7 @@
     },
     "root": {
       "inputs": {
+        "firefox-addons": "firefox-addons",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
@@ -622,7 +645,8 @@
         "nixos-unified": "nixos-unified",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "vertex": "vertex"
+        "vertex": "vertex",
+        "zen-browser": "zen-browser"
       }
     },
     "systems": {
@@ -713,6 +737,29 @@
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
         "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790940304,
+        "narHash": "sha256-i1W4IdG9PVdSRN1rvTHaqiVqvnRS3+OXgaQa7z5iRDc=",
+        "ref": "refs/heads/main",
+        "rev": "b12abb753335dd3b9ba5ea90d3be799bd9b2dc29",
+        "revCount": 1321,
+        "type": "git",
+        "url": "https://github.com/0xc000022070/zen-browser-flake"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/0xc000022070/zen-browser-flake"
       }
     }
   },

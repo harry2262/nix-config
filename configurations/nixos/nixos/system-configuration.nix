@@ -3,9 +3,9 @@
 {
   # Placeholder - replace with your actual config
   environment.systemPackages = with pkgs; [
-    vim
+    vim # root's emergency editor (root does not see home-manager's profile)
     wget
-    git
+    # git is provided by home-manager (programs.git) - do not duplicate here
   ];
 
   networking.networkmanager.enable = true;

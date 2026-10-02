@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  # Nix packages to install to $HOME
+  # Packages that build and work on every machine (Linux + macOS).
   #
   # Search for packages here: https://search.nixos.org/packages
   home.packages = with pkgs; [
@@ -20,7 +20,6 @@
     nix-info
     nixpkgs-fmt
 
-
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.
     less
@@ -29,8 +28,12 @@
     diesel-cli
     tmux
     uv
-    zed-editor
-    
+
+    # Editors / tools (cross-platform)
+    zed-editor # launched as `zeditor`
+    kitty
+    opencode
+    firefox # builds on macOS too; move to linux.nix if you prefer the native app there
   ];
 
   # Programs natively supported by home-manager.
